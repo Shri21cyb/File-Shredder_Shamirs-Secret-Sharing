@@ -1,6 +1,6 @@
-<h1 align="center">Prevention of DOS for a login account</h1>
+<h1 align="center">File Shredder using Shamir's Secret Sharing</h1>
 <h2>Team Members</h2>
-<ol type="1"><li>Navneet Priyadarshi(22BCS074)</li><li>Shruthik Sai(22BCS096)</li><li>Sanchay Awana(22BCS109)</li><li>Shaik Guffran Ahmed(22BCS112)</li></ol>
+<ol type="1"><li>Saahil Mishra (22BCS105)</li><li>Rohit (22BCS100)</li><li>Shriya Udupa (22BCS121)</li><li>Laxmi (22BCS059)</li></ol>
 <hr>
 <h2>About DOS attack</h2>
 <p>A Denial-of-Service (DOS) attack is a an attempt to disrupt the normal functioning of a targeted server,service,or network by overwhelming it with a flood of traffic or requests.The goal is to make the service unavailable to legitimate users.</p>
