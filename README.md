@@ -1,1 +1,1 @@
-# File-Shredder_Shamirs-Secret-Sharing
+# File Shredder using Shamir's-Secret-Sharing
