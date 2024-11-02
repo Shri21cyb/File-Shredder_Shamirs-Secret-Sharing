@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/123saahil/File-Shredder_Shamirs-Secret-Sharing/issues"
   },
-  "homepage": "https://github.com/123saahil/File-Shredder_Shamirs-Secret-Sharing#readme"
+  "homepage": "https://github.com/123saahil/File-Shredder_Shamirs-Secret-Sharing#readme",
+  "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.1.6",
+    "@mui/material": "^6.1.6"
+  }
 }
