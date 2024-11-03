@@ -4,6 +4,32 @@ import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import "./App.css";
 
 function App() {
+  const uploadFiles = async (event) => {
+    const files = event.target.files;
+    if (files.length > 0) {
+      const formData = new FormData();
+      for (let i = 0; i < files.length; i++) {
+        formData.append("files", files[i]); // Append each file to the form data
+      }
+
+      try {
+        const response = await fetch("http://localhost:5000/upload", {
+          // Replace with your server's URL
+          method: "POST",
+          body: formData,
+        });
+
+        if (response.ok) {
+          const result = await response.json();
+          console.log("Files uploaded successfully:", result);
+        } else {
+          console.error("Error uploading files:", response.statusText);
+        }
+      } catch (error) {
+        console.error("Error uploading files:", error);
+      }
+    }
+  };
   return (
     <>
       <div className="heading">
@@ -27,15 +53,9 @@ function App() {
           }}
         >
           Upload Files
-          <input
-            type="file"
-            onChange={(event) => console.log(event.target.files)}
-            multiple
-            hidden
-          />
+          <input type="file" onChange={uploadFiles} multiple hidden />
         </Button>
       </div>
-          
     </>
   );
 }
