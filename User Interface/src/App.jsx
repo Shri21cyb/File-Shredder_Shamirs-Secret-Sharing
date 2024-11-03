@@ -2,6 +2,7 @@ import React from "react";
 import Button from "@mui/material/Button";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import "./App.css";
+import UploadButton from "/home/saahil/Desktop/File-Shredder_Shamirs-Secret-Sharing/User Interface/searchButton.jsx";
 
 function App() {
   const uploadFiles = async (event) => {
@@ -38,23 +39,50 @@ function App() {
         </h1>
       </div>
       <div className="button-enc">
-        <Button
+        {/* <Button
           variant="contained"
           component="label"
           startIcon={<CloudUploadIcon />}
           sx={{
-            backgroundColor: "#4CAF50", // Customize as needed
+            backgroundColor: "#4CAF50",
             color: "#fff",
             padding: "10px 20px",
             borderRadius: "8px",
+            overflow: "hidden",
+            position: "relative",
             "&:hover": {
               backgroundColor: "#45a049",
+            },
+            "&::before": {
+              content: '""',
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              borderRadius: "inherit",
+              background:
+                "conic-gradient(from 180deg at 50% 50%, transparent, #4caf50, #4caf50, transparent)",
+              animation: "rotateGlow 4s linear infinite",
+              zIndex: 1,
+              opacity: 0.8,
+            },
+            "&:hover::before": {
+              opacity: 1,
             },
           }}
         >
           Upload Files
           <input type="file" onChange={uploadFiles} multiple hidden />
-        </Button>
+        </Button> */}
+<UploadButton></UploadButton>
+        {/* <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        
+        <Input/> */}
       </div>
     </>
   );
