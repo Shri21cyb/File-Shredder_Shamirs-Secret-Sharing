@@ -33,8 +33,21 @@ function App() {
     }
   };
 
-  const handleEncrypt = () => {
-    console.log("Encrypting files...");
+  const handleEncrypt = async () => {
+    try {
+      const response = await fetch("http://localhost:5000/encrypt", {
+        method: "POST",
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        console.log("Files encrypted successfully:", result);
+      } else {
+        console.error("Encryption failed:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Error during encryption:", error);
+    }
   };
 
   return (
